@@ -6,128 +6,120 @@
 <title>Innovate & Communicate</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--p:#7C3AED;--pl:#EDE9FE;--pd:#5B21B6;--pk:#EC4899;--bg:#F5F3FF;--w:#fff;--g:#6B7280;--d:#1F2937;--b:#E5E7EB;--green:#10B981;--red:#EF4444;--yellow:#F59E0B}
+:root{--p:#7C3AED;--pl:#EDE9FE;--pd:#5B21B6;--pk:#EC4899;--bg:#F5F3FF;--w:#fff;--g:#6B7280;--d:#1F2937;--b:#E5E7EB;--green:#10B981;--red:#EF4444}
 body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,var(--bg),#FDF2F8);min-height:100vh;color:var(--d)}
 .hide{display:none!important}
-/* RGPD */
-.rgpd-btn{position:fixed;bottom:14px;right:14px;z-index:999;background:var(--d);color:#fff;border:none;border-radius:20px;padding:7px 14px;font-size:12px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+footer{text-align:center;font-size:11px;color:var(--g);padding:10px;position:fixed;bottom:0;left:0;width:100%;background:rgba(255,255,255,.85);backdrop-filter:blur(4px);z-index:50}
+.rgpd-btn{position:fixed;bottom:32px;right:14px;z-index:999;background:var(--d);color:#fff;border:none;border-radius:20px;padding:7px 14px;font-size:12px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center;padding:16px}
 .overlay.open{display:flex}
-.modal{background:#fff;border-radius:16px;width:100%;max-width:520px;max-height:82vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.3)}
-.modal-h{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--b);font-weight:700;font-size:16px}
-.modal-b{padding:16px 20px;overflow-y:auto;font-size:13px;line-height:1.7}
+.modal{background:#fff;border-radius:16px;width:100%;max-width:520px;max-height:82vh;display:flex;flex-direction:column}
+.modal-h{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--b);font-weight:700}
+.modal-b{padding:16px 18px;overflow-y:auto;font-size:13px;line-height:1.7}
 .modal-b h3{font-weight:700;color:var(--pd);margin:10px 0 3px}
-.modal-f{padding:12px 20px;border-top:1px solid var(--b)}
-.modal-f button,.xbtn{background:none;border:none;cursor:pointer;font-size:18px;color:var(--g)}
-.modal-f button{background:var(--p);color:#fff;padding:9px 22px;border-radius:8px;font-weight:600;font-size:14px}
-/* SCREENS */
+.modal-f{padding:10px 18px;border-top:1px solid var(--b)}
+.modal-f button{background:var(--p);color:#fff;padding:9px 20px;border-radius:8px;font-weight:600;font-size:14px;border:none;cursor:pointer}
+.xbtn{background:none;border:none;cursor:pointer;font-size:18px;color:var(--g)}
 .screen{display:none;flex-direction:column;min-height:100vh}
 .screen.active{display:flex}
-/* HOME */
-#s-home{align-items:center;justify-content:center;padding:24px 16px}
-.card{background:#fff;border-radius:20px;padding:32px 24px;width:100%;max-width:500px;box-shadow:0 8px 32px rgba(124,58,237,.13)}
-.badge{display:inline-block;background:var(--pl);color:var(--pd);border-radius:20px;padding:4px 14px;font-size:12px;font-weight:700;margin-bottom:14px}
-h1{font-size:32px;font-weight:800;line-height:1.2;margin-bottom:8px}
+#s-home{align-items:center;justify-content:center;padding:24px 16px 50px}
+.card{background:#fff;border-radius:20px;padding:28px 22px;width:100%;max-width:500px;box-shadow:0 8px 32px rgba(124,58,237,.13)}
+.badge{display:inline-block;background:var(--pl);color:var(--pd);border-radius:20px;padding:4px 14px;font-size:12px;font-weight:700;margin-bottom:12px}
+h1{font-size:30px;font-weight:800;line-height:1.2;margin-bottom:8px}
 h1 em{font-style:normal;background:linear-gradient(135deg,var(--p),var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{color:var(--g);font-size:14px;line-height:1.6;margin-bottom:20px}
-.lbl{display:block;font-weight:600;font-size:13px;margin:12px 0 5px}
+.sub{color:var(--g);font-size:14px;line-height:1.6;margin-bottom:18px}
+.lbl{display:block;font-weight:600;font-size:13px;margin:11px 0 5px}
 input[type=text],textarea,select{width:100%;padding:10px 13px;border-radius:10px;border:2px solid var(--b);font-size:14px;outline:none;font-family:inherit;transition:border .2s}
 input[type=text]:focus,textarea:focus{border-color:var(--p)}
 .members-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:5px}
 .err{color:var(--red);font-size:13px;margin-top:6px;min-height:16px}
-.btn-grad{width:100%;padding:14px;background:linear-gradient(135deg,var(--p),var(--pk));color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;margin-top:16px;box-shadow:0 4px 15px rgba(124,58,237,.3)}
+.btn-grad{width:100%;padding:13px;background:linear-gradient(135deg,var(--p),var(--pk));color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;margin-top:14px;box-shadow:0 4px 15px rgba(124,58,237,.3)}
 .btn-grad:hover{opacity:.9}
-.notice{font-size:12px;color:var(--g);text-align:center;margin-top:10px}
-.mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
-.mode-card{background:var(--pl);border:2px solid transparent;border-radius:14px;padding:18px 14px;cursor:pointer;text-align:center;transition:all .2s}
+.notice{font-size:12px;color:var(--g);text-align:center;margin-top:9px}
+.mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.mode-card{background:var(--pl);border:2px solid transparent;border-radius:14px;padding:16px 12px;cursor:pointer;text-align:center;transition:all .2s}
 .mode-card:hover,.mode-card.sel{border-color:var(--p);background:#fff;box-shadow:0 2px 12px rgba(124,58,237,.15)}
-.mode-card .icon{font-size:28px;margin-bottom:6px}
-.mode-card .mtitle{font-weight:700;font-size:14px;color:var(--d)}
-.mode-card .msub{font-size:12px;color:var(--g);margin-top:3px}
-/* PROGRESS */
-.prog-wrap{padding:11px 18px;background:#fff;border-bottom:1px solid var(--b);flex-shrink:0}
-.prog-top{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:5px}
+.mode-card .icon{font-size:26px;margin-bottom:5px}
+.mode-card .mtitle{font-weight:700;font-size:13px}
+.mode-card .msub{font-size:11px;color:var(--g);margin-top:2px}
+.prog-wrap{padding:10px 16px;background:#fff;border-bottom:1px solid var(--b);flex-shrink:0}
+.prog-top{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px}
 .prog-bar{height:6px;background:var(--b);border-radius:6px;overflow:hidden}
 .prog-fill{height:100%;background:linear-gradient(90deg,var(--p),var(--pk));border-radius:6px;transition:width .4s}
-.pills{display:flex;gap:5px;margin-top:7px;flex-wrap:wrap}
-.pill{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;background:var(--b);color:var(--g)}
+.pills{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap}
+.pill{padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600;background:var(--b);color:var(--g);cursor:pointer;transition:all .2s}
+.pill:hover{opacity:.8}
 .pill.done{background:var(--pl);color:var(--pd)}
 .pill.cur{background:linear-gradient(135deg,var(--p),var(--pk));color:#fff}
-/* ACTIVITY */
+.pill.skipped{background:#FEF3C7;color:#92400E;border:1px dashed #F59E0B}
 #s-activity{min-height:100vh}
-.act-body{flex:1;overflow-y:auto;padding:20px 16px}
+.act-body{flex:1;overflow-y:auto;padding:18px 16px 60px}
 .act-inner{max-width:640px;margin:0 auto}
-.step-card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px;animation:fu .3s ease}
-@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.step-stage{font-size:11px;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
-.step-q{font-size:16px;font-weight:700;line-height:1.4;margin-bottom:6px}
-.step-hint{font-size:13px;color:var(--g);line-height:1.5;margin-bottom:14px}
-.vocab-box{background:var(--pl);border-radius:9px;padding:9px 13px;font-size:12px;color:var(--pd);margin-bottom:13px;line-height:1.6}
-.vocab-box strong{display:block;margin-bottom:3px}
-.choices{display:flex;flex-direction:column;gap:7px}
-.choice{padding:11px 14px;border-radius:11px;border:2px solid var(--b);background:#fff;font-size:14px;cursor:pointer;text-align:left;font-family:inherit;font-weight:500;transition:all .2s}
+.step-card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,.07);margin-bottom:14px;animation:fu .25s ease}
+@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.step-stage{font-size:11px;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.step-q{font-size:15px;font-weight:700;line-height:1.4;margin-bottom:5px}
+.step-hint{font-size:13px;color:var(--g);line-height:1.5;margin-bottom:12px}
+.choices{display:flex;flex-direction:column;gap:6px}
+.choice{padding:10px 13px;border-radius:10px;border:2px solid var(--b);background:#fff;font-size:14px;cursor:pointer;text-align:left;font-family:inherit;font-weight:500;transition:all .2s}
 .choice:hover{border-color:var(--p);background:var(--pl);color:var(--pd)}
 .choice.sel{border-color:var(--p);background:var(--pl);color:var(--pd)}
 .multi .choice.sel{border-color:var(--green);background:#ECFDF5;color:#065F46}
-.custom-inp{margin-top:9px;min-height:unset!important;height:42px!important}
-textarea.step-ta{min-height:90px;resize:vertical}
-.fb{border-radius:11px;padding:12px 14px;margin-top:12px;font-size:14px;line-height:1.5;display:none}
+textarea.step-ta{min-height:85px;resize:vertical;margin-top:4px}
+.fb{border-radius:10px;padding:11px 13px;margin-top:10px;font-size:13px;line-height:1.5;display:none}
 .fb.show{display:block}
 .fb.ok{background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46}
 .fb.bad{background:#FEF2F2;border:1px solid #FECACA;color:#991B1B}
 .fb.info{background:var(--pl);border:1px solid #C4B5FD;color:var(--pd)}
-.fb.warn{background:#FFFBEB;border:1px solid #FDE68A;color:#92400E}
-.step-nav{display:flex;gap:9px;margin-top:14px;justify-content:flex-end}
-.btn-back{padding:8px 16px;border-radius:9px;border:2px solid var(--b);background:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
-.btn-next{padding:9px 20px;border-radius:9px;border:none;background:linear-gradient(135deg,var(--p),var(--pk));color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
-.sum-bar{background:#fff;border-top:1px solid var(--b);padding:9px 16px;font-size:12px;color:var(--g);flex-shrink:0}
-/* channel justify grid */
-.ch-justify{display:flex;flex-direction:column;gap:10px}
-.ch-row{background:var(--pl);border-radius:10px;padding:12px}
-.ch-row label{font-weight:700;font-size:13px;color:var(--pd);margin-bottom:5px;display:block}
-.ch-row textarea{min-height:60px;background:#fff}
-/* tone free input */
-.tone-free{margin-top:9px}
-/* yes/no */
-.yn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-/* REPORT */
-#s-report{min-height:100vh}
-.rep-hdr{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;background:linear-gradient(135deg,var(--pd),var(--p));color:#fff;flex-shrink:0}
-.rep-hdr h2{font-size:17px;font-weight:800}
-.rep-body{flex:1;overflow-y:auto;padding:18px 16px}
-.rep-inner{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:13px}
-.info-box{background:#fff;border-radius:13px;padding:15px;box-shadow:0 2px 8px rgba(0,0,0,.06);font-size:14px;line-height:1.8}
-.instr-box{background:var(--pl);border-radius:13px;padding:15px;font-size:14px;line-height:1.9}
+.step-nav{display:flex;gap:8px;margin-top:12px;justify-content:flex-end;flex-wrap:wrap}
+.btn-back{padding:8px 14px;border-radius:9px;border:2px solid var(--b);background:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+.btn-next{padding:9px 18px;border-radius:9px;border:none;background:linear-gradient(135deg,var(--p),var(--pk));color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+.btn-skip{padding:8px 14px;border-radius:9px;border:2px dashed #F59E0B;background:#FFFBEB;color:#92400E;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+.skipped-banner{background:#FFFBEB;border:1px solid #FDE68A;border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:13px;color:#92400E}
+.sum-bar{background:#fff;border-top:1px solid var(--b);padding:8px 14px;font-size:12px;color:var(--g);flex-shrink:0}
+.justify-grid{display:flex;flex-direction:column;gap:9px}
+.justify-row{background:var(--pl);border-radius:10px;padding:11px}
+.justify-row label{font-weight:700;font-size:13px;color:var(--pd);margin-bottom:5px;display:block}
+.justify-row textarea{min-height:55px;background:#fff}
+.usp-sections{display:flex;flex-direction:column;gap:10px}
+.usp-sec{background:var(--pl);border-radius:10px;padding:12px}
+.usp-sec label{font-weight:700;font-size:13px;color:var(--pd);margin-bottom:5px;display:block}
+.usp-sec textarea{min-height:60px;background:#fff}
+.yn-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.rep-hdr{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:linear-gradient(135deg,var(--pd),var(--p));color:#fff;flex-shrink:0}
+.rep-hdr h2{font-size:16px;font-weight:800}
+.rep-body{flex:1;overflow-y:auto;padding:16px;padding-bottom:50px}
+.rep-inner{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.info-box{background:#fff;border-radius:12px;padding:14px;box-shadow:0 2px 8px rgba(0,0,0,.06);font-size:14px;line-height:1.8}
+.instr-box{background:var(--pl);border-radius:12px;padding:14px;font-size:13px;line-height:1.9}
 .instr-box strong{color:var(--pd)}
-.btn-dl{padding:13px;background:linear-gradient(135deg,var(--p),var(--pk));color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;width:100%}
-.syn-block{background:#fff;border-radius:13px;padding:15px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.syn-block h3{font-size:13px;font-weight:700;color:var(--p);margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--b)}
-.syn-row{display:flex;gap:8px;margin-bottom:7px;font-size:13px}
-.syn-lbl{font-weight:600;min-width:160px;flex-shrink:0;color:var(--d)}
+.btn-dl{padding:12px;background:linear-gradient(135deg,var(--p),var(--pk));color:#fff;border:none;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;width:100%}
+.syn-block{background:#fff;border-radius:12px;padding:14px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.syn-block h3{font-size:13px;font-weight:700;color:var(--p);margin-bottom:7px;padding-bottom:5px;border-bottom:1px solid var(--b)}
+.syn-row{display:flex;gap:8px;margin-bottom:6px;font-size:13px}
+.syn-lbl{font-weight:600;min-width:150px;flex-shrink:0;color:var(--d)}
 .syn-val{color:var(--g);flex:1;white-space:pre-wrap}
-/* EVAL */
-#s-eval{min-height:100vh}
-.eval-hdr{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;background:linear-gradient(135deg,var(--pd),var(--p));color:#fff;flex-shrink:0}
-.eval-hdr h2{font-size:17px;font-weight:800}
-.eval-body{flex:1;overflow-y:auto;padding:18px 16px}
+.eval-hdr{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:linear-gradient(135deg,var(--pd),var(--p));color:#fff;flex-shrink:0}
+.eval-hdr h2{font-size:16px;font-weight:800}
+.eval-body{flex:1;overflow-y:auto;padding:16px;padding-bottom:50px}
 .eval-inner{max-width:680px;margin:0 auto}
-.team-card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.07);margin-bottom:16px}
-.team-card h3{font-size:15px;font-weight:700;margin-bottom:14px;color:var(--pd)}
-.crit-row{margin-bottom:13px}
-.crit-label{font-size:13px;font-weight:600;margin-bottom:5px}
-.crit-hint{font-size:12px;color:var(--g);margin-bottom:6px}
-.rating-row{display:flex;gap:5px;flex-wrap:wrap}
-.rating-btn{width:36px;height:36px;border-radius:8px;border:2px solid var(--b);background:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .15s}
+.team-card{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,.07);margin-bottom:14px}
+.team-card h3{font-size:14px;font-weight:700;margin-bottom:12px;color:var(--pd)}
+.crit-row{margin-bottom:11px}
+.crit-label{font-size:13px;font-weight:600;margin-bottom:3px}
+.crit-hint{font-size:11px;color:var(--g);margin-bottom:5px}
+.rating-row{display:flex;gap:4px;flex-wrap:wrap}
+.rating-btn{width:34px;height:34px;border-radius:7px;border:2px solid var(--b);background:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .15s}
 .rating-btn:hover{border-color:var(--p);color:var(--p)}
 .rating-btn.sel{background:linear-gradient(135deg,var(--p),var(--pk));color:#fff;border-color:var(--p)}
-.add-team-btn{width:100%;padding:11px;background:var(--pl);color:var(--pd);border:2px dashed var(--p);border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:14px;font-family:inherit}
-.eval-comment{margin-top:10px}
-.eval-comment textarea{min-height:60px}
+.add-team-btn{width:100%;padding:10px;background:var(--pl);color:var(--pd);border:2px dashed var(--p);border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:12px;font-family:inherit}
 </style>
 </head>
 <body>
 
+<footer>Créé par C. Iemfre</footer>
 <button class="rgpd-btn" onclick="document.getElementById('rgpd-modal').classList.add('open')">🔒 RGPD</button>
+
 <div class="overlay" id="rgpd-modal" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="modal">
     <div class="modal-h">🔒 RGPD &amp; Confidentialité <button class="xbtn" onclick="document.getElementById('rgpd-modal').classList.remove('open')">✕</button></div>
@@ -148,10 +140,10 @@ textarea.step-ta{min-height:90px;resize:vertical}
   <div class="card">
     <span class="badge">Pitch to Investors</span>
     <h1>🚀 Innovate &amp;<br/><em>Communicate</em></h1>
-    <p class="sub">Build an innovative company, design your campaign — and pitch to investors. Choose your mode below.</p>
+    <p class="sub">Build an innovative company, design your campaign — and pitch to investors.</p>
     <div class="lbl">What do you want to do?</div>
     <div class="mode-grid">
-      <div class="mode-card" id="mode-create" onclick="setMode('create')">
+      <div class="mode-card sel" id="mode-create" onclick="setMode('create')">
         <div class="icon">🏗️</div>
         <div class="mtitle">Create my project</div>
         <div class="msub">Build your company &amp; pitch</div>
@@ -167,8 +159,8 @@ textarea.step-ta{min-height:90px;resize:vertical}
       <input type="text" id="inp-class" placeholder=""/>
       <div class="lbl">Team name</div>
       <input type="text" id="inp-team" placeholder=""/>
-      <div class="lbl">Team members — format: 2 letters first name + 2 letters last name (e.g. CA-IE)</div>
-      <div class="members-grid" id="members-grid">
+      <div class="lbl">Team members — 2 letters first name + 2 letters last name (e.g. CA-IE)</div>
+      <div class="members-grid">
         <input type="text" id="m1" placeholder="e.g. CA-IE" maxlength="5"/>
         <input type="text" id="m2" placeholder="e.g. MA-LE" maxlength="5"/>
         <input type="text" id="m3" placeholder="e.g. JE-DU" maxlength="5"/>
@@ -181,7 +173,7 @@ textarea.step-ta{min-height:90px;resize:vertical}
       <input type="text" id="eval-class" placeholder=""/>
       <div class="lbl">Your team name</div>
       <input type="text" id="eval-myteam" placeholder=""/>
-      <div class="lbl">Your team members (same format: CA-IE)</div>
+      <div class="lbl">Your team members (CA-IE format)</div>
       <div class="members-grid">
         <input type="text" id="em1" placeholder="e.g. CA-IE" maxlength="5"/>
         <input type="text" id="em2" placeholder="e.g. MA-LE" maxlength="5"/>
@@ -189,7 +181,7 @@ textarea.step-ta{min-height:90px;resize:vertical}
         <input type="text" id="em4" placeholder="e.g. TH-MA" maxlength="5"/>
         <input type="text" id="em5" placeholder="e.g. SO-BO" maxlength="5"/>
       </div>
-      <div class="lbl">Teams to evaluate — add team names</div>
+      <div class="lbl">Teams to evaluate</div>
       <div id="eval-teams-list"></div>
       <button class="add-team-btn" onclick="addEvalTeam()">+ Add a team</button>
     </div>
@@ -202,7 +194,7 @@ textarea.step-ta{min-height:90px;resize:vertical}
 <!-- ACTIVITY -->
 <div class="screen" id="s-activity">
   <div class="prog-wrap">
-    <div class="prog-top"><span id="prog-lbl">Point 1 / 10</span><span id="prog-pct">0%</span></div>
+    <div class="prog-top"><span id="prog-lbl">Point 1 / 8</span><span id="prog-pct">0%</span></div>
     <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
     <div class="pills" id="pills"></div>
   </div>
@@ -222,19 +214,18 @@ textarea.step-ta{min-height:90px;resize:vertical}
     <div class="rep-inner">
       <div class="info-box" id="rep-info"></div>
       <div class="instr-box">
-        <p>1. Download the report below.</p>
-        <p>2. Paste into Word / Google Doc and export as <strong>PDF</strong>.</p>
-        <p>3. Send via <strong>Ecole Directe</strong> to your teacher.</p>
-        <p>4. Subject: <strong>Innovate &amp; Communicate – [Your Company Name]</strong></p>
-        <p>5. Write your <strong>first names</strong> in the message body.</p>
+        <p>1. Click <strong>Print / Save as PDF</strong> below to generate your PDF.</p>
+        <p>2. Send the PDF via <strong>Ecole Directe</strong> to your teacher.</p>
+        <p>3. Subject: <strong>Innovate &amp; Communicate – [Your Company Name]</strong></p>
+        <p>4. Write your <strong>first names</strong> in the message body.</p>
       </div>
-      <button class="btn-dl" onclick="downloadReport()">⬇️ Download report (.txt)</button>
+      <button class="btn-dl" onclick="printReport()">🖨️ Print / Save as PDF</button>
       <div id="syn-blocks"></div>
     </div>
   </div>
 </div>
 
-<!-- EVAL SCREEN -->
+<!-- EVAL -->
 <div class="screen" id="s-eval">
   <div class="eval-hdr">
     <h2>⭐ Team Evaluation</h2>
@@ -243,227 +234,165 @@ textarea.step-ta{min-height:90px;resize:vertical}
   <div class="eval-body">
     <div class="eval-inner" id="eval-inner"></div>
     <div style="max-width:680px;margin:0 auto 20px">
-      <button class="btn-dl" onclick="downloadEvalReport()">⬇️ Download evaluation report (.txt)</button>
+      <button class="btn-dl" onclick="printEvalReport()">🖨️ Print / Save as PDF</button>
     </div>
   </div>
 </div>
 
-<script>
-// ── STATE ──────────────────────────────────────
-var mode = 'create';
-var group = {};
-var answers = {};
-var stepIndex = 0;
-var evalTeams = [];
-var evalData = {};
+<div id="print-area" style="display:none"></div>
 
-// ── POINTS (10 structured points) ─────────────
-var POINTS = [
-  {id:'p1', label:'Concept', title:'1. The Concept',
-   steps:[
-    {id:'sector', type:'choice', q:'What sector does your company operate in?',
+<script>
+var mode='create';
+var group={};
+var answers={};
+var stepIndex=0;
+var skippedSteps={};
+var evalTeams=[];
+var evalData={};
+
+var POINTS=[
+  {id:'p1',label:'Concept',title:'1. The Concept',steps:[
+    {id:'sector',type:'choice',q:'What sector does your company operate in?',
      hint:'Choose the closest sector or type your own below.',
      choices:['Technology & AI','Health & Wellbeing','Education & Learning','Sustainability & Environment','Food & Nutrition','Fashion & Lifestyle','Entertainment & Culture','Social Impact'],
-     allowCustom:true, customPh:'Or type your own sector…'},
-    {id:'companyName', type:'text', q:'What is your company name?',
-     hint:'Memorable, original, reflects your brand identity.',
-     ph:'Your company name…', minW:1},
-    {id:'concept', type:'text', q:'Describe your concept — minimum 3 key ideas.',
-     hint:'What does your company do? What makes it different? No full sentences needed.',
-     ph:'• Idea 1\n• Idea 2\n• Idea 3', minW:3}
-   ]
-  },
-  {id:'p2', label:'Innovation', title:'2. Innovation',
-   steps:[
-    {id:'innovation', type:'text', q:'What is truly innovative about your product or service? — minimum 3 key ideas.',
-     hint:'Think: new technology, new approach, new market, new experience. Why does it not exist yet?',
-     ph:'• Innovation point 1\n• Innovation point 2\n• Innovation point 3', minW:3,
-     vocab:{t:'Key vocabulary', v:'disruptive innovation · blue ocean strategy · first-mover advantage · pain point · value proposition'}},
-    {id:'hasTech', type:'yn', q:'Does your product have specific technical features?',
-     hint:'Hardware, software, materials, process, patent-worthy features…'},
-    {id:'techFeatures', type:'text', q:'Describe your key technical features — minimum 3 key ideas.',
+     allowCustom:true,customPh:'Or type your own sector…'},
+    {id:'companyName',type:'text',q:'What is your company name?',
+     hint:'Memorable, original, reflects your brand identity.',ph:'Your company name…',minW:1},
+    {id:'concept',type:'text',q:'Describe your concept — minimum 3 key ideas.',
+     hint:'What does your company do? What makes it different? Keywords or short notes.',
+     ph:'• Idea 1\n• Idea 2\n• Idea 3',minW:3}
+  ]},
+  {id:'p2',label:'Innovation',title:'2. Innovation',steps:[
+    {id:'innovation',type:'text',q:'What is truly innovative about your product or service? — minimum 3 key ideas.',
+     hint:'New technology, new approach, new market, new experience. Why does it not exist yet?',
+     ph:'• Innovation point 1\n• Innovation point 2\n• Innovation point 3',minW:3},
+    {id:'hasTech',type:'yn',q:'Does your product have specific technical features?',
+     hint:'Hardware, software, materials, process…'},
+    {id:'techFeatures',type:'text',q:'Describe your key technical features — minimum 3 key ideas.',
      hint:'Be precise. Investors want to understand HOW it works.',
-     ph:'• Technical feature 1\n• Technical feature 2\n• Technical feature 3', minW:3, conditional:'hasTech:yes'},
-    {id:'problem', type:'text', q:'What real-world problem does your product solve? — minimum 3 key ideas.',
-     hint:'Be specific. Who suffers from this problem? How often? How seriously?',
-     ph:'• Problem point 1\n• Problem point 2\n• Problem point 3', minW:3}
-   ]
-  },
-  {id:'p3', label:'Target', title:'3. Target Market',
-   steps:[
-    {id:'targetAge', type:'choice', q:'What is the primary age range of your target customer?',
+     ph:'• Technical feature 1\n• Technical feature 2\n• Technical feature 3',minW:3,cond:'hasTech:yes'},
+    {id:'problem',type:'text',q:'What real-world problem does your product solve? — minimum 3 key ideas.',
+     hint:'Who suffers from this problem? How often? How seriously?',
+     ph:'• Problem point 1\n• Problem point 2\n• Problem point 3',minW:3}
+  ]},
+  {id:'p3',label:'Target',title:'3. Target Market',steps:[
+    {id:'targetAge',type:'choice',q:'What is the primary age range of your targeted customer?',
      choices:['Under 18','18–25','26–35','36–50','50+','All ages']},
-    {id:'targetProfile', type:'text', q:'Describe your ideal customer — minimum 3 key ideas.',
+    {id:'targetProfile',type:'text',q:'Describe your targeted customer — minimum 3 key ideas.',
      hint:'Lifestyle, values, digital habits, purchasing behaviour.',
-     ph:'• Key idea 1\n• Key idea 2\n• Key idea 3', minW:3,
-     vocab:{t:'Key vocabulary', v:'market segmentation · psychographic profile · early adopters · niche market · B2B / B2C'}},
-    {id:'marketSize', type:'text', q:'Estimate your target market size — minimum 3 key ideas.',
-     hint:'How many potential customers exist? In which countries? What is the market growth trend?',
-     ph:'• Market size estimate\n• Geographic scope\n• Growth trend', minW:3}
-   ]
-  },
-  {id:'p4', label:'Pricing', title:'4. Pricing Strategy',
-   steps:[
-    {id:'priceStrategy', type:'choice', q:'What is your pricing strategy?',
-     hint:'Choose the model that best fits your product and target.',
-     choices:['Premium pricing (high price, exclusive positioning)','Competitive pricing (aligned with market rates)','Penetration pricing (low price to gain market share)','Freemium (free basic + paid premium)','Subscription model (monthly/annual fee)','Pay-per-use model']},
-    {id:'priceJustify', type:'text', q:'Justify your pricing strategy — minimum 3 key ideas.',
-     hint:'Why this model? How does it fit your target customer and your positioning?',
-     ph:'• Key reason 1\n• Key reason 2\n• Key reason 3', minW:3},
-    {id:'pricePoint', type:'text', q:'What is your estimated price point? Give a specific figure and justify it.',
-     hint:'Ex: €29/month because our target is young professionals willing to pay for convenience.',
-     ph:'Our price is… because…', minW:4}
-   ]
-  },
-  {id:'p5', label:'Distribution', title:'5. Distribution',
-   steps:[
-    {id:'distChannels', type:'multi', q:'How will you distribute your product or service? Select all that apply.',
+     ph:'• Key idea 1\n• Key idea 2\n• Key idea 3',minW:3},
+    {id:'marketSize',type:'text',q:'Estimate your target market size — minimum 3 key ideas.',
+     hint:'How many potential customers? Which countries? Market growth trend?',
+     ph:'• Market size estimate\n• Geographic scope\n• Growth trend',minW:3}
+  ]},
+  {id:'p4',label:'Pricing',title:'4. Pricing Strategy',steps:[
+    {id:'priceStrategy',type:'choice',q:'What is your pricing strategy?',
+     choices:['Premium pricing (high price, exclusive positioning)','Competitive pricing (aligned with market rates)','Penetration pricing (low price to gain market share)','Freemium (free basic + paid premium)','Subscription model (monthly/annual fee)','Pay-per-use model'],
+     allowCustom:true,customPh:'Or describe your own pricing model…'},
+    {id:'priceJustify',type:'justify-single',q:'Justify your pricing strategy.',
+     hint:'Why this model? How does it fit your target customer and positioning?',
+     justifyKey:'priceStrategy'},
+    {id:'pricePoint',type:'text',q:'What is your estimated price point?',
+     hint:'Give a specific figure and a short justification.',
+     ph:'e.g. €29/month — affordable for young professionals',minW:3}
+  ]},
+  {id:'p5',label:'Distribution',title:'5. Distribution',steps:[
+    {id:'distChannels',type:'multi',q:'How will you distribute your product or service?',
      choices:['Own e-commerce website','Amazon / marketplace','Physical retail store','Pop-up / events','Direct B2B sales force','App store (iOS / Android)','Wholesale / resellers','Subscription box'],
-     min:1, max:8},
-    {id:'distJustify', type:'text', q:'Justify your distribution choices — minimum 3 key ideas.',
-     hint:'Why these channels? How do they reach your target customer efficiently?',
-     ph:'• Justification 1\n• Justification 2\n• Justification 3', minW:3}
-   ]
-  },
-  {id:'p6', label:'Communication', title:'6. Communication Strategy',
-   steps:[
-    {id:'keyMessage', type:'text', q:'What is the ONE key message of your campaign?',
-     hint:'One sentence. What should your audience remember? Not a slogan — a message.',
-     ph:'After seeing our campaign, the audience should remember that…', minW:4},
-    {id:'channels', type:'multi', q:'Select 2 to 4 communication channels.',
+     allowCustom:true,customPh:'Or add your own distribution channel…',min:1,max:8},
+    {id:'distJustify',type:'justify-multi',q:'Justify each distribution channel.',
+     hint:'Why does each channel reach your target customer efficiently?',
+     justifyKey:'distChannels'}
+  ]},
+  {id:'p6',label:'Campaign',title:'6. Communication Campaign',steps:[
+    {id:'keyMessage',type:'text',q:'What is the ONE key message of your campaign?',
+     hint:'One sentence. What should your audience remember?',
+     ph:'After seeing our campaign, the audience should remember that…',minW:4},
+    {id:'channels',type:'multi',q:'Select 2 to 4 communication channels.',
      choices:['Instagram','TikTok','LinkedIn','YouTube','Podcast','Influencer marketing','Outdoor advertising','Email marketing','Press relations (PR)','Live events','B2B partnerships','Newsletter'],
-     min:2, max:4,
-     vocab:{t:'Key vocabulary', v:'above-the-line · below-the-line · reach · engagement rate · brand consistency · omnichannel'}},
-    {id:'channelsWhy', type:'channel-justify', q:'Justify each channel choice.',
-     hint:'Explain why each channel fits your specific target audience.'},
-    {id:'tone', type:'tone', q:'Define your brand tone — choose up to 3 adjectives or write your own.',
-     choices:['Bold','Minimalist','Humorous','Inspiring','Luxurious','Rebellious','Warm & Human','Playful','Serious & Expert','Sustainable & Ethical','Futuristic','Inclusive'],
-     max:3},
-    {id:'slogan', type:'text', q:'Write your campaign slogan in English.',
-     hint:'Short, memorable, on-brand. Max 8 words.',
-     ph:'Your slogan…', minW:2}
-   ]
-  },
-  {id:'p7', label:'Visuals', title:'7. Visual Identity',
-   steps:[
-    {id:'visualFormat', type:'choice', q:'What is the main format of your communication visual?',
-     choices:['Instagram post (square)','Instagram story (vertical)','TikTok video thumbnail','Billboard / outdoor poster','LinkedIn banner','Flyer / leaflet','Website homepage banner']},
-    {id:'colours', type:'multi', q:'Choose 2 or 3 dominant colours.',
-     hint:'Consider colour psychology — what does each colour communicate to your audience?',
-     choices:['Black (power, luxury)','White (purity, minimalism)','Deep purple (creativity)','Electric blue (tech, trust)','Red (urgency, boldness)','Orange (energy, warmth)','Green (nature, health)','Gold / Yellow (premium, optimism)','Pink (emotion, youth)','Navy (professionalism)','Coral (modern, friendly)','Grey (neutral, balanced)'],
-     min:2, max:3,
-     vocab:{t:'Colour psychology', v:'Your colour choices must align with your brand tone and trigger the right emotion in your target audience.'}},
-    {id:'coloursWhy', type:'text', q:'Justify your colour choices — minimum 3 key ideas.',
-     hint:'Link colours to your brand tone and target persona.',
-     ph:'• Key idea 1\n• Key idea 2\n• Key idea 3', minW:3},
-    {id:'typo', type:'choice', q:'What typography style suits your brand?',
-     choices:['Bold & geometric (strong, modern)','Handwritten / script (personal, creative)','Serif / classic (prestigious, trustworthy)','Minimal sans-serif (clean, digital)','Futuristic / tech (innovative)']},
-    {id:'imagery', type:'text', q:'Describe the central visual element of your campaign.',
-     hint:'What is the hero image? What emotion should it trigger? Be specific.',
-     ph:'Our central visual is… It should make the viewer feel…', minW:5}
-   ]
-  },
-  {id:'p8', label:'Pitch', title:'8. Investor Pitch',
-   steps:[
-    {id:'usp', type:'text', q:'What is your Unique Selling Proposition (USP)? — minimum 3 key ideas.',
-     hint:'Why should an investor choose YOUR company over all others? What is your unfair advantage?',
-     ph:'• USP point 1\n• USP point 2\n• USP point 3', minW:3,
-     vocab:{t:'Key vocabulary', v:'USP · competitive advantage · differentiator · barrier to entry · scalability'}},
-    {id:'revenue', type:'text', q:'How will your company make money? — minimum 3 key ideas.',
+     min:2,max:4},
+    {id:'channelsWhy',type:'justify-multi',q:'Justify each channel choice.',
+     hint:'Why does each channel fit your specific target audience?',
+     justifyKey:'channels'},
+    {id:'tone',type:'tone',q:'Define your brand tone — choose up to 3 adjectives or write your own.',
+     choices:['Bold','Minimalist','Humorous','Inspiring','Luxurious','Rebellious','Warm & Human','Playful','Serious & Expert','Sustainable & Ethical','Futuristic','Inclusive'],max:3},
+    {id:'slogan',type:'text',q:'Write your campaign slogan in English.',
+     hint:'Short, memorable, on-brand. Max 8 words.',ph:'Your slogan…',minW:2}
+  ]},
+  {id:'p7',label:'Pitch',title:'7. Investor Pitch',steps:[
+    {id:'usp1',type:'usp',q:'Your Unique Selling Proposition (USP)',
+     hint:'Complete the 3 sections below to build your investor argument.'},
+    {id:'revenue',type:'text',q:'How will your company make money? — minimum 2 revenue streams.',
      hint:'Revenue streams, business model, projected growth.',
-     ph:'• Revenue stream 1\n• Revenue stream 2\n• Growth projection', minW:3},
-    {id:'investorAsk', type:'text', q:'What do you need from investors? Be specific.',
-     hint:'How much funding? What will you use it for? What return can investors expect?',
-     ph:'We are seeking… to fund… Investors can expect…', minW:8}
-   ]
-  },
-  {id:'p9', label:'Competition', title:'9. Competitive Analysis',
-   steps:[
-    {id:'competitors', type:'text', q:'Name your 3 main competitors and explain how you differ from each — minimum 3 key ideas.',
-     hint:'Be honest. Investors know the market. Show you understand it too.',
-     ph:'• Competitor 1: [name] — we differ because…\n• Competitor 2: [name] — we differ because…\n• Competitor 3: [name] — we differ because…', minW:10},
-    {id:'compAdvantage', type:'text', q:'What is your long-term competitive advantage? — minimum 3 key ideas.',
-     hint:'What will stop competitors from copying you in 2 years?',
-     ph:'• Advantage 1\n• Advantage 2\n• Advantage 3', minW:3}
-   ]
-  },
-  {id:'p10', label:'Action Plan', title:'10. Action Plan & Presentation',
-   steps:[
-    {id:'actionPlan', type:'text', q:'What are your first 3 actions after securing investment? — minimum 3 key ideas.',
-     hint:'Be concrete and realistic. Investors want to see you have a plan.',
-     ph:'• Action 1 (Month 1-3):\n• Action 2 (Month 3-6):\n• Action 3 (Month 6-12):', minW:10},
-    {id:'twoSupports', type:'text', q:'Which 2 communication supports will you present to investors?',
-     hint:'Ex: a printed poster + an Instagram post / a video teaser + a billboard / a brochure + a LinkedIn banner. Describe both briefly.',
-     ph:'Support 1: …\nSupport 2: …', minW:5},
-    {id:'presNotes', type:'text', q:'Your presentation preparation notes — what will each team member cover?',
-     hint:'Assign roles: who presents the concept? the market? the campaign? the visuals? the pitch?',
-     ph:'• [Member 1] will present…\n• [Member 2] will present…\n• [Member 3] will present…', minW:8}
-   ]
-  }
+     ph:'• Revenue stream 1\n• Revenue stream 2',minW:3}
+  ]},
+  {id:'p8',label:'Action Plan',title:'8. Action Plan & Presentation',steps:[
+    {id:'actionPlan',type:'text',q:'First actions after launch — keywords or short notes.',
+     hint:'Key milestones and priorities. No full sentences needed.',
+     ph:'• Action 1 (Month 1-3)\n• Action 2 (Month 3-6)\n• Action 3 (Month 6-12)',minW:3},
+    {id:'twoSupports',type:'text',q:'Which 2 communication supports will you present to investors?',
+     hint:'e.g. printed poster + Instagram post / video teaser + LinkedIn banner.',
+     ph:'Support 1: …\nSupport 2: …',minW:4},
+    {id:'presNotes',type:'text',q:'Presentation roles — who presents what?',
+     hint:'Assign roles: concept, market, campaign, visuals, pitch.',
+     ph:'• [Member] will present…\n• [Member] will present…',minW:5}
+  ]}
 ];
 
-// flatten all steps
-var ALL_STEPS = [];
+var ALL_STEPS=[];
 POINTS.forEach(function(pt){
-  pt.steps.forEach(function(s){ s.pointId = pt.id; s.pointLabel = pt.label; s.pointTitle = pt.title; ALL_STEPS.push(s); });
+  pt.steps.forEach(function(s){s.pointId=pt.id;s.pointLabel=pt.label;s.pointTitle=pt.title;ALL_STEPS.push(s);});
 });
 
-// EVAL CRITERIA
-var EVAL_CRITERIA = [
-  {id:'innovation', label:'Innovation & Originality', hint:'Is the concept truly original and innovative?'},
-  {id:'problem', label:'Problem & Solution', hint:'Is the problem clearly identified and the solution relevant?'},
-  {id:'target', label:'Target Market', hint:'Is the target audience well-defined and realistic?'},
-  {id:'pricing', label:'Pricing Strategy', hint:'Is the pricing strategy justified and coherent?'},
-  {id:'distribution', label:'Distribution', hint:'Are distribution channels relevant and well-argued?'},
-  {id:'communication', label:'Communication Strategy', hint:'Is the campaign message clear and well-targeted?'},
-  {id:'visual', label:'Visual Identity', hint:'Is the visual coherent with the brand and target?'},
-  {id:'pitch', label:'Investor Pitch', hint:'Is the pitch convincing? USP, revenue model, funding ask?'},
-  {id:'competition', label:'Competitive Analysis', hint:'Do they know their competitors and their advantages?'},
-  {id:'plan', label:'Action Plan', hint:'Is the action plan realistic and well-structured?'},
-  {id:'english', label:'English Quality', hint:'Is the English clear, professional and fluent?'},
-  {id:'presentation', label:'Overall Presentation', hint:'Confidence, clarity, team coordination, timing.'}
+var EVAL_CRITERIA=[
+  {id:'innovation',label:'Innovation & Originality',hint:'Is the concept truly original?'},
+  {id:'problem',label:'Problem & Solution',hint:'Is the problem identified and solution relevant?'},
+  {id:'target',label:'Target Market',hint:'Is the target well-defined and realistic?'},
+  {id:'pricing',label:'Pricing Strategy',hint:'Is the pricing justified and coherent?'},
+  {id:'distribution',label:'Distribution',hint:'Are distribution channels relevant?'},
+  {id:'communication',label:'Communication Strategy',hint:'Is the campaign message clear and targeted?'},
+  {id:'visual',label:'Visual Identity',hint:'Is the visual coherent with brand and target?'},
+  {id:'pitch',label:'Investor Pitch',hint:'Is the pitch convincing? USP, revenue model?'},
+  {id:'plan',label:'Action Plan',hint:'Is the action plan realistic?'},
+  {id:'english',label:'English Quality',hint:'Is the English clear and professional?'},
+  {id:'presentation',label:'Overall Presentation',hint:'Confidence, clarity, team coordination.'}
 ];
 
-// ── HOME ───────────────────────────────────────
 function setMode(m){
-  mode = m;
-  document.getElementById('mode-create').classList.toggle('sel', m==='create');
-  document.getElementById('mode-eval').classList.toggle('sel', m==='eval');
-  document.getElementById('create-fields').classList.toggle('hide', m!=='create');
-  document.getElementById('eval-fields').classList.toggle('hide', m!=='eval');
+  mode=m;
+  document.getElementById('mode-create').classList.toggle('sel',m==='create');
+  document.getElementById('mode-eval').classList.toggle('sel',m==='eval');
+  document.getElementById('create-fields').classList.toggle('hide',m!=='create');
+  document.getElementById('eval-fields').classList.toggle('hide',m!=='eval');
 }
-setMode('create');
 
 function addEvalTeam(){
-  var div = document.createElement('div');
-  div.style.cssText = 'display:flex;gap:8px;margin-bottom:7px';
-  div.innerHTML = '<input type="text" placeholder="Team name…" style="flex:1"/><button onclick="this.parentNode.remove()" style="background:none;border:none;font-size:18px;cursor:pointer;color:var(--g)">✕</button>';
+  var div=document.createElement('div');
+  div.style.cssText='display:flex;gap:8px;margin-bottom:7px';
+  div.innerHTML='<input type="text" placeholder="Team name…" style="flex:1"/><button onclick="this.parentNode.remove()" style="background:none;border:none;font-size:18px;cursor:pointer;color:var(--g)">✕</button>';
   document.getElementById('eval-teams-list').appendChild(div);
 }
-addEvalTeam(); addEvalTeam(); addEvalTeam();
+addEvalTeam();addEvalTeam();addEvalTeam();
 
 function goStart(){
-  var err = document.getElementById('home-err');
+  var err=document.getElementById('home-err');
   if(mode==='create'){
-    var cls = document.getElementById('inp-class').value.trim();
-    var team = document.getElementById('inp-team').value.trim();
-    var members = ['m1','m2','m3','m4','m5'].map(function(id){return document.getElementById(id).value.trim();}).filter(Boolean);
+    var cls=document.getElementById('inp-class').value.trim();
+    var team=document.getElementById('inp-team').value.trim();
+    var members=['m1','m2','m3','m4','m5'].map(function(id){return document.getElementById(id).value.trim();}).filter(Boolean);
     if(!cls){err.textContent='Please enter your class.';return;}
     if(!team){err.textContent='Please enter your team name.';return;}
     if(members.length<2){err.textContent='Please enter at least 2 member initials.';return;}
     err.textContent='';
     group={cls:cls,team:team,members:members};
-    answers={};
-    stepIndex=0;
-    renderPills();
-    showScreen('s-activity');
-    renderVisibleSteps();
+    answers={};skippedSteps={};stepIndex=0;
+    renderPills();showScreen('s-activity');renderStep(0);
   } else {
-    var cls2 = document.getElementById('eval-class').value.trim();
-    var myteam = document.getElementById('eval-myteam').value.trim();
-    var emems = ['em1','em2','em3','em4','em5'].map(function(id){return document.getElementById(id).value.trim();}).filter(Boolean);
-    var teamInputs = document.querySelectorAll('#eval-teams-list input[type=text]');
-    var teams = [];
+    var cls2=document.getElementById('eval-class').value.trim();
+    var myteam=document.getElementById('eval-myteam').value.trim();
+    var emems=['em1','em2','em3','em4','em5'].map(function(id){return document.getElementById(id).value.trim();}).filter(Boolean);
+    var teamInputs=document.querySelectorAll('#eval-teams-list input[type=text]');
+    var teams=[];
     teamInputs.forEach(function(inp){if(inp.value.trim())teams.push(inp.value.trim());});
     if(!cls2){err.textContent='Please enter your class.';return;}
     if(!myteam){err.textContent='Please enter your team name.';return;}
@@ -471,56 +400,56 @@ function goStart(){
     if(teams.length<1){err.textContent='Please add at least 1 team to evaluate.';return;}
     err.textContent='';
     group={cls:cls2,team:myteam,members:emems};
-    evalTeams=teams;
-    evalData={};
-    buildEvalScreen();
-    showScreen('s-eval');
+    evalTeams=teams;evalData={};
+    buildEvalScreen();showScreen('s-eval');
   }
 }
 
-// ── ACTIVITY ────────────────────────────────────
 function renderPills(){
-  var row = document.getElementById('pills');
-  row.innerHTML = POINTS.map(function(p,i){return '<span class="pill" id="pill-'+i+'">'+p.label+'</span>';}).join('');
+  var row=document.getElementById('pills');
+  row.innerHTML=POINTS.map(function(p,i){return '<span class="pill" id="pill-'+i+'" onclick="jumpToPoint('+i+')">'+p.label+'</span>';}).join('');
 }
 
 function updateProgress(){
-  var visibleSteps = getVisibleSteps();
-  var doneCount = visibleSteps.filter(function(s){return answers[s.id]!==undefined && answers[s.id]!=='';}).length;
-  var pct = visibleSteps.length ? Math.round((doneCount/visibleSteps.length)*100) : 0;
-  document.getElementById('prog-fill').style.width = pct+'%';
-  document.getElementById('prog-pct').textContent = pct+'%';
-  var cur = ALL_STEPS[stepIndex];
-  var ptIdx = POINTS.findIndex(function(p){return p.id===cur.pointId;});
-  document.getElementById('prog-lbl').textContent = 'Point '+(ptIdx+1)+' / 10 — '+cur.pointTitle;
+  var vis=getVisibleSteps();
+  var done=vis.filter(function(s){return isStepDone(s);}).length;
+  var pct=vis.length?Math.round((done/vis.length)*100):0;
+  document.getElementById('prog-fill').style.width=pct+'%';
+  document.getElementById('prog-pct').textContent=pct+'%';
+  var cur=ALL_STEPS[stepIndex];
+  var ptIdx=POINTS.findIndex(function(p){return p.id===cur.pointId;});
+  document.getElementById('prog-lbl').textContent='Point '+(ptIdx+1)+' / 8 — '+cur.pointTitle;
   POINTS.forEach(function(pt,i){
-    var pill = document.getElementById('pill-'+i);
-    if(!pill)return;
-    var pts = pt.steps.filter(function(s){return !s.conditional || condMet(s.conditional);});
-    var done = pts.filter(function(s){return answers[s.id]!==undefined && answers[s.id]!=='';});
-    if(done.length===pts.length) pill.className='pill done';
+    var pill=document.getElementById('pill-'+i);if(!pill)return;
+    var pts=pt.steps.filter(function(s){return condMet(s.cond);});
+    var allDone=pts.every(function(s){return isStepDone(s);});
+    var anySkipped=pts.some(function(s){return skippedSteps[s.id];});
+    if(allDone) pill.className='pill done';
+    else if(anySkipped) pill.className='pill skipped';
     else if(ptIdx===i) pill.className='pill cur';
     else pill.className='pill';
   });
 }
 
-function getVisibleSteps(){
-  return ALL_STEPS.filter(function(s){return !s.conditional || condMet(s.conditional);});
+function jumpToPoint(i){
+  var firstStep=POINTS[i].steps[0];
+  var idx=ALL_STEPS.findIndex(function(s){return s.id===firstStep.id;});
+  if(idx>=0){renderStep(idx);document.querySelector('#s-activity .act-body').scrollTop=0;}
 }
 
-function condMet(cond){
-  if(!cond)return true;
-  var parts=cond.split(':');
-  return answers[parts[0]]===parts[1];
-}
-
-function renderVisibleSteps(){
-  var vis = getVisibleSteps();
-  // find current visible index
-  var curStep = ALL_STEPS[stepIndex];
-  var visIdx = vis.findIndex(function(s){return s.id===curStep.id;});
-  if(visIdx<0){stepIndex=ALL_STEPS.indexOf(vis[0]);} 
-  renderStep(stepIndex);
+function getVisibleSteps(){return ALL_STEPS.filter(function(s){return condMet(s.cond);});}
+function condMet(cond){if(!cond)return true;var p=cond.split(':');return answers[p[0]]===p[1];}
+function isStepDone(s){
+  if(s.type==='justify-multi'){
+    var items=answers[s.justifyKey]||[];
+    return items.length>0&&items.every(function(it){var k='jw_'+s.id+'_'+it.replace(/\W/g,'_');return answers[k]&&answers[k].trim().length>2;});
+  }
+  if(s.type==='justify-single'){var k='jw_'+s.id;return answers[k]&&answers[k].trim().length>2;}
+  if(s.type==='usp'){return answers['usp_diff']&&answers['usp_adv']&&answers['usp_proof'];}
+  if(s.type==='tone'){return answers[s.id]&&[].concat(answers[s.id]).length>0;}
+  if(s.type==='multi'){var v=answers[s.id];return v&&v.length>=(s.min||1);}
+  if(s.type==='text'){var v2=answers[s.id];return v2&&v2.trim().split(/\s+/).filter(Boolean).length>=(s.minW||1);}
+  return !!answers[s.id];
 }
 
 function renderStep(idx){
@@ -528,31 +457,51 @@ function renderStep(idx){
   updateProgress();
   var step=ALL_STEPS[idx];
   var inner=document.getElementById('act-inner');
-  var html='<div class="step-card">';
+  var html='';
+
+  // skipped warning
+  var skippedList=getVisibleSteps().filter(function(s){return skippedSteps[s.id]&&!isStepDone(s);});
+  if(skippedList.length>0 && isLastVisible(idx)){
+    html+='<div class="skipped-banner">⚠️ You have skipped steps that need to be completed: '+skippedList.map(function(s){return '<strong>'+s.pointTitle+'</strong>';}).join(', ')+'</div>';
+  }
+
+  // rehearsal banner before p8
+  if(step.pointId==='p8' && step.id==='actionPlan'){
+    html+='<div class="step-card" style="background:linear-gradient(135deg,var(--p),var(--pk));color:#fff">'
+      +'<div style="font-size:20px;margin-bottom:8px">🎯 Before your final steps — Rehearsal Reminder</div>'
+      +'<p style="font-size:13px;line-height:1.7">Your presentation must cover:</p>'
+      +'<ul style="font-size:13px;line-height:2;padding-left:16px;margin-top:6px">'
+      +'<li><strong>Your company</strong> — concept, innovation, problem solved</li>'
+      +'<li><strong>Your product</strong> — features, pricing, distribution</li>'
+      +'<li><strong>Your communication campaign</strong> — message, channels, tone, slogan</li>'
+      +'<li><strong>At least 2 communication supports</strong></li>'
+      +'<li><strong>Your investor pitch</strong> — USP, revenue streams</li>'
+      +'</ul>'
+      +'<p style="font-size:12px;margin-top:10px;opacity:.85">Challenge: <strong>convince investors to fund your company.</strong></p>'
+      +'</div>';
+  }
+
+  html+='<div class="step-card">';
   html+='<div class="step-stage">'+step.pointTitle+'</div>';
   html+='<div class="step-q">'+step.q+'</div>';
   if(step.hint) html+='<div class="step-hint">'+step.hint+'</div>';
-  if(step.vocab) html+='<div class="vocab-box"><strong>💡 '+step.vocab.t+'</strong>'+step.vocab.v+'</div>';
 
   if(step.type==='choice'){
     html+='<div class="choices" id="cw">';
-    step.choices.forEach(function(c){
-      var s=answers[step.id]===c?' sel':'';
-      html+='<button class="choice'+s+'" onclick="selChoice(\''+step.id+'\',this,\''+esc(c)+'\')">'+c+'</button>';
-    });
+    step.choices.forEach(function(c){var s=answers[step.id]===c?' sel':'';html+='<button class="choice'+s+'" onclick="selChoice(\''+step.id+'\',this,\''+esc(c)+'\')">'+c+'</button>';});
     html+='</div>';
     if(step.allowCustom){
       var cv=(answers[step.id]&&step.choices.indexOf(answers[step.id])===-1)?answers[step.id]:'';
-      html+='<input type="text" class="step-input custom-inp" id="custom-inp" placeholder="'+step.customPh+'" value="'+cv+'" oninput="selCustom(\''+step.id+'\',this.value)"/>';
+      html+='<input type="text" style="margin-top:9px" id="custom-inp" placeholder="'+step.customPh+'" value="'+cv+'" oninput="selCustom(\''+step.id+'\',this.value)"/>';
     }
   } else if(step.type==='multi'){
     var saved=answers[step.id]||[];
     html+='<div class="choices multi" id="cw">';
-    step.choices.forEach(function(c){
-      var s=saved.indexOf(c)>-1?' sel':'';
-      html+='<button class="choice'+s+'" onclick="selMulti(\''+step.id+'\',this,\''+esc(c)+'\','+step.min+','+(step.max||99)+')">'+c+'</button>';
-    });
-    html+='</div><p style="font-size:12px;color:var(--g);margin-top:6px">Select '+(step.min===step.max?step.min:step.min+' to '+step.max)+'.</p>';
+    step.choices.forEach(function(c){var s=saved.indexOf(c)>-1?' sel':'';html+='<button class="choice'+s+'" onclick="selMulti(\''+step.id+'\',this,\''+esc(c)+'\','+step.min+','+(step.max||99)+')">'+c+'</button>';});
+    html+='</div><p style="font-size:12px;color:var(--g);margin-top:5px">Select '+(step.min===step.max?step.min:step.min+' to '+step.max)+'.</p>';
+    if(step.allowCustom){
+      html+='<input type="text" style="margin-top:9px" id="custom-multi-inp" placeholder="'+step.customPh+'" oninput="addCustomMulti(\''+step.id+'\',this)"/>';
+    }
   } else if(step.type==='text'){
     var sv=answers[step.id]||'';
     html+='<textarea class="step-ta" id="txt-inp" placeholder="'+step.ph+'" oninput="onTxt(\''+step.id+'\')">'+sv+'</textarea>';
@@ -562,82 +511,60 @@ function renderStep(idx){
     html+='<button class="choice'+(yv==='yes'?' sel':'')+'" onclick="selYN(\''+step.id+'\',\'yes\',this)">✅ Yes — specify below</button>';
     html+='<button class="choice'+(yv==='no'?' sel':'')+'" onclick="selYN(\''+step.id+'\',\'no\',this)">⏭️ No — move on</button>';
     html+='</div>';
-  } else if(step.type==='channel-justify'){
-    var chs=answers['channels']||[];
-    html+='<div class="ch-justify" id="cw">';
-    chs.forEach(function(ch){
-      var key='chWhy_'+ch.replace(/\W/g,'_');
-      var sv2=answers[key]||'';
-      html+='<div class="ch-row"><label>'+ch+'</label><textarea placeholder="Why does this channel fit your target audience?" oninput="answers[\''+key+'\']=this.value">'+sv2+'</textarea></div>';
-    });
-    html+='</div>';
+  } else if(step.type==='justify-multi'){
+    var items=answers[step.justifyKey]||[];
+    if(items.length===0){html+='<p style="color:var(--g);font-size:13px">Please select your '+step.justifyKey+' first.</p>';}
+    else{
+      html+='<div class="justify-grid">';
+      items.forEach(function(it){
+        var k='jw_'+step.id+'_'+it.replace(/\W/g,'_');
+        var sv2=answers[k]||'';
+        html+='<div class="justify-row"><label>'+it+'</label><textarea placeholder="Why does this fit your target audience?" oninput="onJustify(\''+k+'\',this.value)">'+sv2+'</textarea></div>';
+      });
+      html+='</div>';
+    }
+  } else if(step.type==='justify-single'){
+    var jval=answers['jw_'+step.id]||'';
+    var jitem=answers[step.justifyKey]||'(not selected yet)';
+    html+='<div class="justify-grid"><div class="justify-row"><label>'+jitem+'</label><textarea placeholder="Why this choice? How does it fit your target and positioning?" oninput="onJustify(\'jw_'+step.id+'\',this.value)">'+jval+'</textarea></div></div>';
   } else if(step.type==='tone'){
     var tSaved=answers[step.id]||[];
     html+='<div class="choices multi" id="cw">';
-    step.choices.forEach(function(c){
-      var s=tSaved.indexOf(c)>-1?' sel':'';
-      html+='<button class="choice'+s+'" onclick="selMulti(\''+step.id+'\',this,\''+esc(c)+'\',0,'+step.max+')">'+c+'</button>';
-    });
+    step.choices.forEach(function(c){var s=tSaved.indexOf(c)>-1?' sel':'';html+='<button class="choice'+s+'" onclick="selMulti(\''+step.id+'\',this,\''+esc(c)+'\',0,'+step.max+')">'+c+'</button>';});
     html+='</div>';
-    var tv=Array.isArray(tSaved)?tSaved.filter(function(x){return step.choices.indexOf(x)===-1;}).join(', '):'';
-    html+='<input type="text" class="step-input tone-free" id="tone-free" placeholder="Or type your own adjectives (comma-separated)…" value="'+tv+'" oninput="onToneFree(\''+step.id+'\',this.value)"/>';
+    var freeVal=tSaved.filter(function(x){return step.choices.indexOf(x)===-1;}).join(', ');
+    html+='<input type="text" style="margin-top:9px" id="tone-free" placeholder="Or type your own adjectives (comma-separated)…" value="'+freeVal+'" oninput="onToneFree(\''+step.id+'\',this.value)"/>';
+  } else if(step.type==='usp'){
+    html+='<div class="usp-sections">';
+    html+='<div class="usp-sec"><label>🎯 What makes you different from competitors?</label><textarea placeholder="Keywords or short notes…" oninput="onUsp(\'usp_diff\',this.value)">'+(answers['usp_diff']||'')+'</textarea></div>';
+    html+='<div class="usp-sec"><label>💪 What is your long-term competitive advantage?</label><textarea placeholder="What will stop competitors from copying you?" oninput="onUsp(\'usp_adv\',this.value)">'+(answers['usp_adv']||'')+'</textarea></div>';
+    html+='<div class="usp-sec"><label>📊 What proof or evidence supports your USP?</label><textarea placeholder="Data, trends, early traction, patents…" oninput="onUsp(\'usp_proof\',this.value)">'+(answers['usp_proof']||'')+'</textarea></div>';
+    html+='</div>';
   }
 
   html+='<div class="fb" id="fb"></div>';
   html+='<div class="step-nav">';
   if(idx>0) html+='<button class="btn-back" onclick="renderStep('+(idx-1)+')">← Back</button>';
-  var isLast = isLastVisible(idx);
-  html+='<button class="btn-next" onclick="nextStep()">'+(isLast?'Generate Report →':'Continue →')+'</button>';
+  if(!isLastVisible(idx)) html+='<button class="btn-skip" onclick="skipStep()">Skip for now</button>';
+  html+='<button class="btn-next" onclick="nextStep()">'+(isLastVisible(idx)?'Generate Report →':'Continue →')+'</button>';
   html+='</div></div>';
 
-  // rehearsal reminder before last point
-  if(step.pointId==='p10' && step.id==='twoSupports'){
-    html = '<div class="step-card" style="background:linear-gradient(135deg,var(--p),var(--pk));color:#fff;border:none">'
-      +'<div style="font-size:22px;margin-bottom:10px">🎯 Rehearsal Reminder</div>'
-      +'<p style="font-size:14px;line-height:1.7;margin-bottom:8px">Before your presentation, remember what you need to cover:</p>'
-      +'<ul style="font-size:14px;line-height:2;padding-left:18px">'
-      +'<li><strong>Your company</strong> — concept, innovation, problem solved</li>'
-      +'<li><strong>Your product</strong> — features, pricing, distribution</li>'
-      +'<li><strong>Your communication campaign</strong> — message, channels, tone, slogan</li>'
-      +'<li><strong>At least 2 communication supports</strong> (poster, social post, video, brochure…)</li>'
-      +'<li><strong>Your investor pitch</strong> — USP, revenue, funding ask</li>'
-      +'<li><strong>Your competitive advantage</strong> and action plan</li>'
-      +'</ul>'
-      +'<p style="font-size:13px;margin-top:12px;opacity:.85">Your challenge: <strong>convince investors to fund your company.</strong> Every choice must be justified.</p>'
-      +'<button class="btn-back" style="margin-top:16px;background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.4)" onclick="renderStep('+idx+')">Continue to final steps →</button>'
-      +'</div>' + html;
-    inner.innerHTML = html;
-    inner.querySelector('.step-card:last-child') && inner.scrollTo(0,0);
-  } else {
-    inner.innerHTML = html;
-  }
+  inner.innerHTML=html;
   updateSummary();
-  if(answers[step.id]) showStepFeedback(step);
+  if(isStepDone(step)) showStepFb(true);
 }
 
-function isLastVisible(idx){
-  var vis=getVisibleSteps();
-  return vis[vis.length-1].id === ALL_STEPS[idx].id;
-}
-
+function isLastVisible(idx){var vis=getVisibleSteps();return vis[vis.length-1].id===ALL_STEPS[idx].id;}
 function esc(s){return s.replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
 
 function selChoice(key,el,val){
   document.querySelectorAll('#cw .choice').forEach(function(b){b.classList.remove('sel');});
-  el.classList.add('sel');
-  answers[key]=val;
-  var ci=document.getElementById('custom-inp');
-  if(ci)ci.value='';
-  showStepFeedback(ALL_STEPS[stepIndex]);
-  updateSummary();
+  el.classList.add('sel');answers[key]=val;
+  var ci=document.getElementById('custom-inp');if(ci)ci.value='';
+  showStepFb(true);updateSummary();
 }
 function selCustom(key,val){
-  if(val.trim()){
-    document.querySelectorAll('#cw .choice').forEach(function(b){b.classList.remove('sel');});
-    answers[key]=val.trim();
-    showStepFeedback(ALL_STEPS[stepIndex]);
-    updateSummary();
-  }
+  if(val.trim()){document.querySelectorAll('#cw .choice').forEach(function(b){b.classList.remove('sel');});answers[key]=val.trim();showStepFb(true);updateSummary();}
 }
 function selMulti(key,el,val,min,max){
   var cur=answers[key]?answers[key].slice():[];
@@ -645,88 +572,80 @@ function selMulti(key,el,val,min,max){
   if(i>-1){cur.splice(i,1);el.classList.remove('sel');}
   else if(cur.length<max){cur.push(val);el.classList.add('sel');}
   answers[key]=cur;
-  if(cur.length>=min) showStepFeedback(ALL_STEPS[stepIndex]);
+  if(cur.length>=min) showStepFb(true);
   updateSummary();
+}
+function addCustomMulti(key,el){
+  if(el.value.trim().length>2){
+    var cur=answers[key]?answers[key].slice():[];
+    if(cur.indexOf(el.value.trim())===-1){cur.push(el.value.trim());answers[key]=cur;}
+    showStepFb(true);updateSummary();
+  }
 }
 function selYN(key,val,el){
   document.querySelectorAll('#cw .choice').forEach(function(b){b.classList.remove('sel');});
-  el.classList.add('sel');
-  answers[key]=val;
-  showStepFeedback(ALL_STEPS[stepIndex]);
-  // re-render visible steps to show/hide conditional
-  updateProgress();
+  el.classList.add('sel');answers[key]=val;showStepFb(true);updateProgress();
 }
-var _txtTimer=null;
+var _txtT=null;
 function onTxt(key){
-  var el=document.getElementById('txt-inp');
-  if(!el)return;
+  var el=document.getElementById('txt-inp');if(!el)return;
   answers[key]=el.value;
-  if(_txtTimer)clearTimeout(_txtTimer);
-  _txtTimer=setTimeout(function(){
+  if(_txtT)clearTimeout(_txtT);
+  _txtT=setTimeout(function(){
     var wc=el.value.trim().split(/\s+/).filter(Boolean).length;
     var step=ALL_STEPS[stepIndex];
-    if(wc>=(step.minW||1)) showStepFeedback(step);
+    if(wc>=(step.minW||1)) showStepFb(true);
     updateSummary();
   },300);
 }
-var _toneTimer=null;
+function onJustify(key,val){answers[key]=val;setTimeout(function(){showStepFb(isStepDone(ALL_STEPS[stepIndex]));},300);}
+function onUsp(key,val){answers[key]=val;setTimeout(function(){showStepFb(isStepDone(ALL_STEPS[stepIndex]));},300);}
+var _toneT=null;
 function onToneFree(key,val){
-  if(_toneTimer)clearTimeout(_toneTimer);
-  _toneTimer=setTimeout(function(){
-    var step=POINTS[5].steps.find(function(s){return s.id===key;});
+  if(_toneT)clearTimeout(_toneT);
+  _toneT=setTimeout(function(){
+    var step=ALL_STEPS.find(function(s){return s.id===key;});
     var existing=answers[key]?answers[key].filter(function(x){return step&&step.choices.indexOf(x)>-1;}):[];
-    var freeAdj=val.split(',').map(function(x){return x.trim();}).filter(Boolean);
-    answers[key]=existing.concat(freeAdj);
+    var free=val.split(',').map(function(x){return x.trim();}).filter(Boolean);
+    answers[key]=existing.concat(free);
+    showStepFb(answers[key].length>0);
   },300);
 }
-
-function showStepFeedback(step){
-  var fb=document.getElementById('fb');
-  if(!fb)return;
-  var val=answers[step.id];
-  var ok=false;
-  if(step.type==='text'){ok=val&&val.trim().split(/\s+/).filter(Boolean).length>=(step.minW||1);}
-  else if(step.type==='multi'||step.type==='tone'){ok=val&&val.length>=(step.min||0);}
-  else if(step.type==='channel-justify'){
-    var chs=answers['channels']||[];
-    ok=chs.every(function(ch){var k='chWhy_'+ch.replace(/\W/g,'_');return answers[k]&&answers[k].trim().length>3;});
-  }
-  else{ok=!!val;}
+function showStepFb(ok){
+  var fb=document.getElementById('fb');if(!fb)return;
   if(ok){fb.className='fb show ok';fb.textContent='✓ Good — continue when ready.';}
 }
-
+function skipStep(){
+  skippedSteps[ALL_STEPS[stepIndex].id]=true;
+  advanceStep();
+}
 function nextStep(){
   var step=ALL_STEPS[stepIndex];
-  var val=answers[step.id];
-  var ok=false;
-  if(step.type==='text'){ok=val&&val.trim().split(/\s+/).filter(Boolean).length>=(step.minW||1);}
-  else if(step.type==='multi'||step.type==='tone'){ok=val&&val.length>=(step.min||0);}
-  else if(step.type==='yn'){ok=!!val;}
-  else if(step.type==='channel-justify'){
-    var chs=answers['channels']||[];
-    ok=chs.length>0&&chs.every(function(ch){var k='chWhy_'+ch.replace(/\W/g,'_');return answers[k]&&answers[k].trim().length>2;});
-  }
-  else{ok=!!val;}
-  if(!ok){
+  if(!isStepDone(step)){
     var fb=document.getElementById('fb');
     fb.className='fb show bad';
     fb.textContent='Please complete this step before continuing. Write in English.';
     return;
   }
-  // skip conditional steps if condition not met
-  var nextIdx=stepIndex+1;
-  while(nextIdx<ALL_STEPS.length && ALL_STEPS[nextIdx].conditional && !condMet(ALL_STEPS[nextIdx].conditional)){
-    nextIdx++;
+  if(skippedSteps[step.id]) delete skippedSteps[step.id];
+  // check if all skipped steps are done before generating report
+  if(isLastVisible(stepIndex)){
+    var pending=getVisibleSteps().filter(function(s){return skippedSteps[s.id]&&!isStepDone(s);});
+    if(pending.length>0){
+      var fb2=document.getElementById('fb');
+      fb2.className='fb show bad';
+      fb2.textContent='⚠️ Please complete skipped steps before generating your report: '+pending.map(function(s){return s.pointTitle;}).join(', ');
+      return;
+    }
+    buildReport();showScreen('s-report');return;
   }
-  if(nextIdx<ALL_STEPS.length){
-    renderStep(nextIdx);
-    document.querySelector('#s-activity .act-body').scrollTop=0;
-  } else {
-    buildReport();
-    showScreen('s-report');
-  }
+  advanceStep();
 }
-
+function advanceStep(){
+  var nextIdx=stepIndex+1;
+  while(nextIdx<ALL_STEPS.length&&ALL_STEPS[nextIdx].cond&&!condMet(ALL_STEPS[nextIdx].cond)){nextIdx++;}
+  if(nextIdx<ALL_STEPS.length){renderStep(nextIdx);document.querySelector('#s-activity .act-body').scrollTop=0;}
+}
 function updateSummary(){
   var parts=[];
   if(answers.companyName) parts.push('<strong>Company:</strong> '+answers.companyName);
@@ -739,118 +658,103 @@ function updateSummary(){
 // ── REPORT ──────────────────────────────────────
 function buildReport(){
   var date=new Date().toLocaleDateString('fr-FR');
-  document.getElementById('rep-info').innerHTML=
-    '<strong>Class:</strong> '+group.cls+'<br>'+
-    '<strong>Team:</strong> '+group.team+'<br>'+
-    '<strong>Members:</strong> '+group.members.join(', ')+'<br>'+
-    '<strong>Date:</strong> '+date;
+  document.getElementById('rep-info').innerHTML='<strong>Class:</strong> '+group.cls+'<br><strong>Team:</strong> '+group.team+'<br><strong>Members:</strong> '+group.members.join(', ')+'<br><strong>Date:</strong> '+date;
   var blocks=POINTS.map(function(pt){
     var rows=[];
     pt.steps.forEach(function(s){
-      if(s.conditional&&!condMet(s.conditional))return;
-      var val=answers[s.id];
-      if(s.type==='multi'||s.type==='tone') val=val?[].concat(val).join(', '):'';
-      if(s.type==='channel-justify'){
-        var chs=answers['channels']||[];
-        val=chs.map(function(ch){var k='chWhy_'+ch.replace(/\W/g,'_');return ch+': '+(answers[k]||'');}).join('\n');
+      if(s.cond&&!condMet(s.cond))return;
+      var val='';
+      if(s.type==='multi'||s.type==='tone') val=answers[s.id]?[].concat(answers[s.id]).join(', '):'';
+      else if(s.type==='justify-multi'){
+        var items=answers[s.justifyKey]||[];
+        val=items.map(function(it){var k='jw_'+s.id+'_'+it.replace(/\W/g,'_');return it+': '+(answers[k]||'—');}).join('\n');
       }
-      if(val) rows.push([s.q.split('?')[0].split(' — ')[0], val]);
+      else if(s.type==='justify-single') val=answers['jw_'+s.id]||'';
+      else if(s.type==='usp') val='Differentiator: '+(answers['usp_diff']||'—')+'\nAdvantage: '+(answers['usp_adv']||'—')+'\nProof: '+(answers['usp_proof']||'—');
+      else if(s.type==='yn') val=answers[s.id]==='yes'?'Yes':'No';
+      else val=answers[s.id]||'';
+      if(val) rows.push([s.q.split('?')[0].split(' — ')[0].substring(0,50),val]);
     });
-    return {title:pt.title, rows:rows};
+    return {title:pt.title,rows:rows};
   });
   var synHtml='';
   blocks.forEach(function(b){
     synHtml+='<div class="syn-block"><h3>'+b.title+'</h3>';
-    b.rows.forEach(function(r){
-      if(r[1]) synHtml+='<div class="syn-row"><span class="syn-lbl">'+r[0]+'</span><span class="syn-val">'+r[1]+'</span></div>';
-    });
+    b.rows.forEach(function(r){if(r[1])synHtml+='<div class="syn-row"><span class="syn-lbl">'+r[0]+'</span><span class="syn-val">'+r[1]+'</span></div>';});
     synHtml+='</div>';
   });
   document.getElementById('syn-blocks').innerHTML=synHtml;
-  var txt='PROJECT REPORT — Innovate & Communicate\n\n';
-  txt+='Class: '+group.cls+'\nTeam: '+group.team+'\nMembers: '+group.members.join(', ')+'\nDate: '+date+'\n\n';
-  txt+='='.repeat(60)+'\n\n';
-  blocks.forEach(function(b){
-    txt+=b.title+'\n'+'-'.repeat(b.title.length)+'\n';
-    b.rows.forEach(function(r){if(r[1])txt+=r[0]+':\n'+r[1]+'\n\n';});
-    txt+='\n';
+}
+
+function printReport(){
+  var date=new Date().toLocaleDateString('fr-FR');
+  var content='<html><head><title>Report – '+(answers.companyName||'Project')+'</title><style>body{font-family:Segoe UI,sans-serif;padding:32px;color:#1F2937;max-width:800px;margin:0 auto}h1{font-size:24px;margin-bottom:4px}h2{font-size:16px;color:#7C3AED;margin:20px 0 8px;border-bottom:1px solid #E5E7EB;padding-bottom:4px}.meta{color:#6B7280;font-size:13px;margin-bottom:20px}.row{display:flex;gap:12px;margin-bottom:8px;font-size:13px}.lbl{font-weight:600;min-width:160px;flex-shrink:0}.val{color:#374151;white-space:pre-wrap}footer{margin-top:40px;font-size:11px;color:#9CA3AF;text-align:center}@media print{body{padding:16px}}</style></head><body>';
+  content+='<h1>Innovate &amp; Communicate — Project Report</h1>';
+  content+='<div class="meta">Class: '+group.cls+' | Team: '+group.team+' | Members: '+group.members.join(', ')+' | Date: '+date+'</div>';
+  POINTS.forEach(function(pt){
+    var rows=[];
+    pt.steps.forEach(function(s){
+      if(s.cond&&!condMet(s.cond))return;
+      var val='';
+      if(s.type==='multi'||s.type==='tone') val=answers[s.id]?[].concat(answers[s.id]).join(', '):'';
+      else if(s.type==='justify-multi'){var items=answers[s.justifyKey]||[];val=items.map(function(it){var k='jw_'+s.id+'_'+it.replace(/\W/g,'_');return it+': '+(answers[k]||'—');}).join('\n');}
+      else if(s.type==='justify-single') val=answers['jw_'+s.id]||'';
+      else if(s.type==='usp') val='Differentiator: '+(answers['usp_diff']||'—')+'\nAdvantage: '+(answers['usp_adv']||'—')+'\nProof: '+(answers['usp_proof']||'—');
+      else if(s.type==='yn') val=answers[s.id]==='yes'?'Yes':'No';
+      else val=answers[s.id]||'';
+      if(val) rows.push([s.q.split('?')[0].split(' — ')[0].substring(0,50),val]);
+    });
+    if(rows.length){
+      content+='<h2>'+pt.title+'</h2>';
+      rows.forEach(function(r){content+='<div class="row"><span class="lbl">'+r[0]+'</span><span class="val">'+r[1].replace(/</g,'&lt;').replace(/\n/g,'<br>')+'</span></div>';});
+    }
   });
-  txt+='='.repeat(60)+'\n\n';
-  txt+='Send this document via Ecole Directe to your teacher.\n';
-  txt+='Subject: Innovate & Communicate – '+(answers.companyName||'[Company Name]')+'\n';
-  txt+='Include your first names in the message body.';
-  window._reportTxt=txt;
+  content+='<footer>Créé par C. Iemfre</footer></body></html>';
+  var w=window.open('','_blank');w.document.write(content);w.document.close();w.focus();setTimeout(function(){w.print();},500);
 }
 
-function downloadReport(){
-  if(!window._reportTxt)return;
-  var a=document.createElement('a');
-  a.href=URL.createObjectURL(new Blob([window._reportTxt],{type:'text/plain;charset=utf-8'}));
-  a.download='report_'+(answers.companyName||'project').replace(/\s/g,'_')+'.txt';
-  a.click();
-}
-
-// ── EVALUATION ──────────────────────────────────
+// ── EVAL ────────────────────────────────────────
 function buildEvalScreen(){
   var inner=document.getElementById('eval-inner');
   var html='<div style="max-width:680px;margin:0 auto">';
-  html+='<div class="info-box" style="margin-bottom:14px"><strong>Evaluating team:</strong> '+group.team+' ('+group.members.join(', ')+')<br><strong>Class:</strong> '+group.cls+'</div>';
+  html+='<div class="info-box" style="margin-bottom:12px"><strong>Evaluating team:</strong> '+group.team+' ('+group.members.join(', ')+')<br><strong>Class:</strong> '+group.cls+'</div>';
   evalTeams.forEach(function(team,ti){
     html+='<div class="team-card"><h3>⭐ '+team+'</h3>';
     EVAL_CRITERIA.forEach(function(cr){
-      var key='eval_'+ti+'_'+cr.id;
-      var saved=evalData[key]||0;
-      html+='<div class="crit-row">';
-      html+='<div class="crit-label">'+cr.label+'</div>';
-      html+='<div class="crit-hint">'+cr.hint+'</div>';
-      html+='<div class="rating-row">';
-      for(var n=1;n<=10;n++){
-        html+='<button class="rating-btn'+(saved===n?' sel':'')+'" onclick="setRating('+ti+',\''+cr.id+'\','+n+',this)">'+n+'</button>';
-      }
+      var key='eval_'+ti+'_'+cr.id;var saved=evalData[key]||0;
+      html+='<div class="crit-row"><div class="crit-label">'+cr.label+'</div><div class="crit-hint">'+cr.hint+'</div><div class="rating-row">';
+      for(var n=1;n<=10;n++)html+='<button class="rating-btn'+(saved===n?' sel':'')+'" onclick="setRating('+ti+',\''+cr.id+'\','+n+',this)">'+n+'</button>';
       html+='</div></div>';
     });
-    html+='<div class="eval-comment"><label class="lbl">Overall comment (optional)</label>';
-    html+='<textarea placeholder="General feedback for this team…" oninput="evalData[\'comment_'+ti+'\']=this.value">'+(evalData['comment_'+ti]||'')+'</textarea></div>';
+    html+='<div style="margin-top:10px"><label class="lbl">Overall comment (optional)</label><textarea placeholder="General feedback for this team…" oninput="evalData[\'comment_'+ti+'\']=this.value">'+(evalData['comment_'+ti]||'')+'</textarea></div>';
     html+='</div>';
   });
   html+='</div>';
   inner.innerHTML=html;
 }
-
 function setRating(ti,crId,val,el){
-  var key='eval_'+ti+'_'+crId;
-  evalData[key]=val;
-  var card=el.closest('.crit-row').querySelector('.rating-row');
-  card.querySelectorAll('.rating-btn').forEach(function(b){b.classList.remove('sel');});
+  var key='eval_'+ti+'_'+crId;evalData[key]=val;
+  el.closest('.rating-row').querySelectorAll('.rating-btn').forEach(function(b){b.classList.remove('sel');});
   el.classList.add('sel');
 }
-
-function downloadEvalReport(){
+function printEvalReport(){
   var date=new Date().toLocaleDateString('fr-FR');
-  var txt='EVALUATION REPORT — Innovate & Communicate\n\n';
-  txt+='Evaluating team: '+group.team+'\nMembers: '+group.members.join(', ')+'\nClass: '+group.cls+'\nDate: '+date+'\n\n';
-  txt+='='.repeat(60)+'\n\n';
+  var content='<html><head><title>Evaluation Report</title><style>body{font-family:Segoe UI,sans-serif;padding:32px;color:#1F2937;max-width:800px;margin:0 auto}h1{font-size:22px;margin-bottom:4px}h2{font-size:15px;color:#7C3AED;margin:20px 0 8px;border-bottom:1px solid #E5E7EB;padding-bottom:4px}.meta{color:#6B7280;font-size:13px;margin-bottom:20px}.crit{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px solid #F3F4F6}.score{font-weight:700;color:#7C3AED}.avg{font-size:14px;font-weight:700;margin-top:10px;color:#10B981}.comment{font-size:13px;color:#6B7280;margin-top:6px;font-style:italic}footer{margin-top:40px;font-size:11px;color:#9CA3AF;text-align:center}@media print{body{padding:16px}}</style></head><body>';
+  content+='<h1>Innovate &amp; Communicate — Evaluation Report</h1>';
+  content+='<div class="meta">Evaluating team: '+group.team+' | Members: '+group.members.join(', ')+' | Class: '+group.cls+' | Date: '+date+'</div>';
   evalTeams.forEach(function(team,ti){
-    txt+='TEAM: '+team+'\n'+'-'.repeat(40)+'\n';
-    var total=0; var count=0;
+    content+='<h2>'+team+'</h2>';
+    var total=0;var count=0;
     EVAL_CRITERIA.forEach(function(cr){
-      var key='eval_'+ti+'_'+cr.id;
-      var score=evalData[key]||0;
-      total+=score; count++;
-      txt+=cr.label+': '+score+'/10\n';
+      var score=evalData['eval_'+ti+'_'+cr.id]||0;total+=score;count++;
+      content+='<div class="crit"><span>'+cr.label+'</span><span class="score">'+score+'/10</span></div>';
     });
-    txt+='\nAverage score: '+(count?Math.round((total/count)*10)/10:0)+'/10\n';
-    if(evalData['comment_'+ti]) txt+='Comment: '+evalData['comment_'+ti]+'\n';
-    txt+='\n';
+    var avg=count?Math.round((total/count)*10)/10:0;
+    content+='<div class="avg">Average: '+avg+'/10</div>';
+    if(evalData['comment_'+ti]) content+='<div class="comment">'+evalData['comment_'+ti]+'</div>';
   });
-  txt+='='.repeat(60)+'\n\n';
-  txt+='Send this document via Ecole Directe to your teacher.\n';
-  txt+='Subject: Evaluation Report – '+group.team+'\n';
-  txt+='Include your first names in the message body.';
-  var a=document.createElement('a');
-  a.href=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'}));
-  a.download='eval_report_'+group.team.replace(/\s/g,'_')+'.txt';
-  a.click();
+  content+='<footer>Créé par C. Iemfre</footer></body></html>';
+  var w=window.open('','_blank');w.document.write(content);w.document.close();w.focus();setTimeout(function(){w.print();},500);
 }
 
 function showScreen(id){
