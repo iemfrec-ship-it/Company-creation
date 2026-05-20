@@ -656,21 +656,28 @@ function selYN(key,val,el){
   // re-render visible steps to show/hide conditional
   updateProgress();
 }
+var _txtTimer=null;
 function onTxt(key){
   var el=document.getElementById('txt-inp');
   if(!el)return;
   answers[key]=el.value;
-  var wc=el.value.trim().split(/\s+/).filter(Boolean).length;
-  var step=ALL_STEPS[stepIndex];
-  if(wc>=(step.minW||1)) showStepFeedback(step);
-  updateSummary();
+  if(_txtTimer)clearTimeout(_txtTimer);
+  _txtTimer=setTimeout(function(){
+    var wc=el.value.trim().split(/\s+/).filter(Boolean).length;
+    var step=ALL_STEPS[stepIndex];
+    if(wc>=(step.minW||1)) showStepFeedback(step);
+    updateSummary();
+  },300);
 }
+var _toneTimer=null;
 function onToneFree(key,val){
-  var existing=answers[key]?answers[key].filter(function(x){
-    return POINTS[5].steps.find(function(s){return s.id===key;}).choices.indexOf(x)>-1;
-  }):[];
-  var freeAdj=val.split(',').map(function(x){return x.trim();}).filter(Boolean);
-  answers[key]=existing.concat(freeAdj);
+  if(_toneTimer)clearTimeout(_toneTimer);
+  _toneTimer=setTimeout(function(){
+    var step=POINTS[5].steps.find(function(s){return s.id===key;});
+    var existing=answers[key]?answers[key].filter(function(x){return step&&step.choices.indexOf(x)>-1;}):[];
+    var freeAdj=val.split(',').map(function(x){return x.trim();}).filter(Boolean);
+    answers[key]=existing.concat(freeAdj);
+  },300);
 }
 
 function showStepFeedback(step){
